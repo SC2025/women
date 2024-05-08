@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,7 +129,7 @@ display: flex;
     <div class="table-sample"> <img src="WK1.jpg" alt="WK1">
     <div class="table">
     <div class="product-name">
-        Cotton design Rumal</div>
+        design Rumal</div>
     <button class="button-product-code">
         product code-WK1</button>
     <table>
@@ -149,7 +150,26 @@ display: flex;
     
     
     
-    
+    <div class="underwere"></div>
+    <div class="table-sample"> <img src="WK0.jpg" alt="WK0">
+        <div class="table">
+        <div class="product-name">
+            Checks Colour Rumal <br> 43cm x 50cm</div>
+        <button class="button-product-code">product code-WK2</button>
+        <table>
+        <tr>
+        <td>1 pieces</td>
+        <td>13 RS</td>
+        </tr>
+        </table>
+        <marquee
+        behavior="alternate"
+        id="marquee"
+        scrollamount = "4">
+        <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+        </marquee>
+        </div>
+    </DIV>  
     
     
     
@@ -164,7 +184,7 @@ display: flex;
     <div class="table-sample"> <img src="WK2.jpg" alt="WK2">
         <div class="table">
         <div class="product-name">
-            Cotton Check Colour Rumal </div>
+            Checks Colour Rumal<br> 50cm x 53cm </div>
         <button class="button-product-code">product code-WK2</button>
         <table>
         <tr>
@@ -202,7 +222,7 @@ display: flex;
     <div class="underwere"></div>
         <div class="table-sample"> <img src="WK3.jpg" alt="WK3">
             <div class="table">
-            <div class="product-name">Cotton Check white Rumal</div>
+            <div class="product-name">white Rumal</div>
             <button class="button-product-code">product code-WK3</button>
             <table>
             <tr>
@@ -325,7 +345,7 @@ display: flex;
     
       
         <div class="underwere"></div>
-        <div class="table-sample"> <img src="WK7.jpg" alt="WK7">
+        <div class="table-sample"> <img id="gaun" src="" alt="WK7">
             <div class="table">
             <div class="product-name">4 to 5 Years <br> girls dress
             </div>
@@ -344,9 +364,66 @@ display: flex;
             </marquee>
             </div>
             </DIV>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="underwere"></div>
+            <div class="table-sample"> 
+<img src="WK8.jpg" alt="">
+                <div class="table">
+                <div class="product-name">4 to 5 Years <br> girls dress
+                </div>
+                <button class="button-product-code">product code-WK8</button>
+                <table>
+                <tr>
+                <td>1 pieces</td>
+                <td>350 RS</td>
+                </tr>
+                </table>
+                <marquee
+                behavior="alternate"
+                id="marquee"
+                scrollamount = "4">
+                <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+                </marquee>
+                </div>
+                </DIV>
+            </a>
         </a>
      
+
+
+
+
     </body>
+    <script>
+
+function ppp() {
+    setTimeout(() => {
+    document.getElementById("gaun").src = "WK1.jpg";
+}, 6000);
+setTimeout(() => {
+    document.getElementById("gaun").src = "WK1.jpg";
+}, 4000);
+setTimeout(() => {
+    document.getElementById("gaun").src = "WK1.jpg";
+},2000); 
+};ppp()
+setInterval(() => {
+    ppp()
+}, 6000);
+    </script>
 </head>
 
 </html>
