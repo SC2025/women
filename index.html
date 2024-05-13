@@ -166,7 +166,26 @@ display: flex;
 
     <div class="underwere"></div>
     <div class="table-sample"> 
-     <img id="WK_two" src="" alt="wk2">
+
+     <!-- <img id="WK_two" src="" alt="wk2"> -->
+
+
+     <div class="image-slideshow">
+
+        <div class="image fade">
+        <img src="wk2A.jpg" alt="Mountain Top">
+        </div>
+          
+        <div class="image fade">
+        <img src="WK2B.jpg" alt="Palm Trees">
+        </div>
+          
+        <div class="image fade">
+        <img src="WK2C.jpg" alt="Neon Sign">
+        </div>
+      </div>
+
+
        <div class="table">
        <div class="product-name"><DIV class="PC">Product code-WK2</DIV>
         4 to 6 Years <br> girls dress
@@ -631,117 +650,21 @@ scrollamount = "4">
 
     </body>
     <script>
-//WK2
-function CHANGEIMG_WK2() {
-    setTimeout(() => {
-    document.getElementById("WK_two").src = "WK2A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_two").src = "WK2B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_two").src = "WK2C.jpg";
-},4000);
-};CHANGEIMG_WK2()
-
-setInterval(() => {
-    CHANGEIMG_WK2()
-}, 6000);
-
-
-
-
-//WK3
-function CHANGEIMG_WK3() {
-    setTimeout(() => {
-    document.getElementById("WK_theree").src = "WK3A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_theree").src = "WK3B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_theree").src = "WK3C.jpg";
-},4000);
-};CHANGEIMG_WK3()
-
-setInterval(() => {
-    CHANGEIMG_WK3()
-}, 6000);
-
-//wk4
-function CHANGEIMG_WK4() {
-    setTimeout(() => {
-    document.getElementById("WK_four").src = "WK4A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_four").src = "WK4B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_four").src = "WK4C.jpg";
-},4000);
-};CHANGEIMG_WK4()
-
-setInterval(() => {
-    CHANGEIMG_WK4()
-}, 6000);
-
-
-
-//wk7
-function CHANGEIMG_WK7() {
-    setTimeout(() => {
-    document.getElementById("WK_seven").src = "WK7A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_seven").src = "WK7B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_seven").src = "WK7C.jpg";
-},4000);
-};CHANGEIMG_WK7()
-
-setInterval(() => {
-    CHANGEIMG_WK7()
-}, 6000);
-
-
-
-//wk8
-function CHANGEIMG_WK8() {
-    setTimeout(() => {
-    document.getElementById("WK_eight").src = "WK8A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_eight").src = "WK8B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_eight").src = "WK8C.jpg";
-},4000);
-};CHANGEIMG_WK8()
-
-setInterval(() => {
-    CHANGEIMG_WK8()
-}, 6000);
-
-
-//wk9
-function CHANGEIMG_WK9() {
-    setTimeout(() => {
-    document.getElementById("WK_nine").src = "WK9A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_nine").src = "WK9B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_nine").src = "WK9C.jpg";
-},4000);
-};CHANGEIMG_WK9()
-
-setInterval(() => {
-    CHANGEIMG_WK9()
-}, 6000);
+displayImages();
+function displayImages() {
+  let i;
+  const images = document.getElementsByClassName("image");
+  for (i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
+  }
+  index++;
+  if (index > images.length) {
+    index = 1;
+  }
+  images[index-1].style.display = "block";
+  setTimeout(displayImages, 2000); 
+}
     </script>
 </head>
 
 </html>
-
