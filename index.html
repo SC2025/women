@@ -166,7 +166,39 @@ display: flex;
 
     <div class="underwere"></div>
     <div class="table-sample"> 
-     <img id="WK_two" src="" alt="wk2">
+     <!-- <img id="WK_two" src="" alt="wk2"> -->
+
+     <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="WK2A.jpj" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="WK2B.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="WK2C.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+
+
+
        <div class="table">
        <div class="product-name"><DIV class="PC">Product code-WK2</DIV>
         4 to 6 Years <br> girls dress
@@ -631,115 +663,25 @@ scrollamount = "4">
 
     </body>
     <script>
-//WK2
-function CHANGEIMG_WK2() {
-    setTimeout(() => {
-    document.getElementById("WK_two").src = "WK2A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_two").src = "WK2B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_two").src = "WK2C.jpg";
-},4000);
-};CHANGEIMG_WK2()
+let slideIndex = 0;
+showSlides();
 
-setInterval(() => {
-    CHANGEIMG_WK2()
-}, 6000);
-
-
-
-
-//WK3
-function CHANGEIMG_WK3() {
-    setTimeout(() => {
-    document.getElementById("WK_theree").src = "WK3A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_theree").src = "WK3B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_theree").src = "WK3C.jpg";
-},4000);
-};CHANGEIMG_WK3()
-
-setInterval(() => {
-    CHANGEIMG_WK3()
-}, 6000);
-
-//wk4
-function CHANGEIMG_WK4() {
-    setTimeout(() => {
-    document.getElementById("WK_four").src = "WK4A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_four").src = "WK4B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_four").src = "WK4C.jpg";
-},4000);
-};CHANGEIMG_WK4()
-
-setInterval(() => {
-    CHANGEIMG_WK4()
-}, 6000);
-
-
-
-//wk7
-function CHANGEIMG_WK7() {
-    setTimeout(() => {
-    document.getElementById("WK_seven").src = "WK7A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_seven").src = "WK7B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_seven").src = "WK7C.jpg";
-},4000);
-};CHANGEIMG_WK7()
-
-setInterval(() => {
-    CHANGEIMG_WK7()
-}, 6000);
-
-
-
-//wk8
-function CHANGEIMG_WK8() {
-    setTimeout(() => {
-    document.getElementById("WK_eight").src = "WK8A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_eight").src = "WK8B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_eight").src = "WK8C.jpg";
-},4000);
-};CHANGEIMG_WK8()
-
-setInterval(() => {
-    CHANGEIMG_WK8()
-}, 6000);
-
-
-//wk9
-function CHANGEIMG_WK9() {
-    setTimeout(() => {
-    document.getElementById("WK_nine").src = "WK9A.jpg";
-}, 1);
-setTimeout(() => {
-    document.getElementById("WK_nine").src = "WK9B.jpg";
-}, 2000);
-setTimeout(() => {
-    document.getElementById("WK_nine").src = "WK9C.jpg";
-},4000);
-};CHANGEIMG_WK9()
-
-setInterval(() => {
-    CHANGEIMG_WK9()
-}, 6000);
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
     </script>
 </head>
 
