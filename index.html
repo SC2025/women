@@ -65,12 +65,15 @@ background-color: rgb(0, 0, 0);
 border: 2px solid;
 padding: 3px;
 margin: 3px;
-color: aliceblue;
+color: aliceblue;}
 
 .active {
   background-color: #717171;
 }
-}
+
+
+
+
 /* div{
 box-shadow: 10px 10px 5px lightblue;
 } */
@@ -121,6 +124,13 @@ display: flex;
 #MAIN_ALL_PAGE_LINK{
     color: black;
 }
+.imgwk{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  
+    
+}
 .PC{
     font-size: 15PX;
     background-color: antiquewhite;
@@ -169,18 +179,18 @@ display: flex;
     <div class="underwere"></div>
     <div class="table-sample"> 
      <!-- <img id="WK_two" src="" alt="wk2"> -->
-     <div class="imageWK2-slideshow">
+     <div id="WK_two" class="imageWK2-slideshow">
 
         <div class="imageWK2 fade">
-        <img src="WK2A.jpg" alt="WK2A">
+        <img class="imgwk" src="WK2A.jpg" alt="WK2A">
         </div>
           
         <div class="imageWK2 fade">
-        <img src="WK2B.jpg" alt="WK2B">
+        <img class="imgwk" src="WK2B.jpg" alt="WK2B">
         </div>
           
         <div class="imageWK2 fade">
-        <img src="WK2C.jpg" alt="WK2C">
+        <img class="imgwk" src="WK2C.jpg" alt="WK2C">
         </div>
       </div>
     
@@ -217,15 +227,21 @@ display: flex;
 
        <div class="underwere"></div>
        <div class="table-sample"> 
-        
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-              <span class="dot"></span> 
+        <div id="WK_two" class="imageWK2-slideshow">
+
+            <div class="imageWK3 fade">
+            <img class="imgwk" src="WK3A.jpg" alt="WK3A">
             </div>
-    
+              
+            <div class="imageWK3 fade">
+            <img class="imgwk" src="WK3B.jpg" alt="WK3B">
+            </div>
+              
+            <div class="imageWK3 fade">
+            <img class="imgwk" src="WK3C.jpg" alt="WK3C">
+            </div>
+          </div>
+     
            <div class="table">
            <div class="product-name"><DIV class="PC">Product code-WK3</DIV>
             14 to 15 Years <br> girls dress
@@ -660,7 +676,7 @@ scrollamount = "4">
 
     </body>
     <script>
- let index = 0;
+ var index = 0;
 displayImagesWK2();
 function displayImagesWK2() {
   let i;
@@ -674,7 +690,27 @@ function displayImagesWK2() {
   }
   imagesWK2[index-1].style.display = "block";
   setTimeout(displayImagesWK2, 2000); 
+};
+
+
+
+displayImagesWK3();
+function displayImagesWK3() {
+  let i;
+  const imagesWK3 = document.getElementsByClassName("imageWK3");
+  for (i = 0; i < imagesWK3.length; i++) {
+    imagesWK3[i].style.display = "none";
+  }
+  index++;
+  if (index > imagesWK3.length) {
+    index = 1;
+  }
+  imagesWK3[index-1].style.display = "block";
+  setTimeout(displayImagesWK3, 2000); 
 }
+
+
+
     </script>
 </head>
 
