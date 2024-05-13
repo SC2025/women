@@ -169,18 +169,18 @@ display: flex;
     <div class="underwere"></div>
     <div class="table-sample"> 
      <!-- <img id="WK_two" src="" alt="wk2"> -->
-     <div class="image-slideshow">
+     <div class="imageWK2-slideshow">
 
-        <div class="image fade">
-        <img src="WK2A.jpg" alt="Mountain Top">
+        <div class="imageWK2 fade">
+        <img src="WK2A.jpg" alt="WK2A">
         </div>
           
-        <div class="image fade">
-        <img src="WK2B.JPG" alt="Palm Trees">
+        <div class="imageWK2 fade">
+        <img src="WK2B.jpg" alt="WK2B">
         </div>
           
-        <div class="image fade">
-        <img src="WK2C.jpg" alt="Neon Sign">
+        <div class="imageWK2 fade">
+        <img src="WK2C.jpg" alt="WK2C">
         </div>
       </div>
     
@@ -661,19 +661,19 @@ scrollamount = "4">
     </body>
     <script>
  let index = 0;
-displayImages();
-function displayImages() {
+displayImagesWK2();
+function displayImagesWK2() {
   let i;
-  const images = document.getElementsByClassName("image");
-  for (i = 0; i < images.length; i++) {
-    images[i].style.display = "none";
+  const imagesWK2 = document.getElementsByClassName("imageWK2");
+  for (i = 0; i < imagesWK2.length; i++) {
+    imagesWK2[i].style.display = "none";
   }
   index++;
-  if (index > images.length) {
+  if (index > imagesWK2.length) {
     index = 1;
   }
-  images[index-1].style.display = "block";
-  setTimeout(displayImages, 2000); 
+  imagesWK2[index-1].style.display = "block";
+  setTimeout(displayImagesWK2, 2000); 
 }
     </script>
 </head>
