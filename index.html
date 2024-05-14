@@ -8,10 +8,16 @@
 <title>Document</title>
 
 <style>
+
+/* .slide_img{
+    height: 50vh;
+width: 40%;
+} */
+
     img{
     background-color: rgb(255, 255, 255);
-height: 29vh;
-width: 50%;
+height: 50vh;
+width: 40%;
 
 background-color: rgb(255, 255, 255);
 border: 1px solid black;
@@ -37,16 +43,23 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+.slideshow-container{
+    object-fit: cover;
+   height: 90%;
+    width: 70%;
+height: fit-content;
+ 
+}
 .table-sample{
 background-color: rgb(255, 255, 255);
 border: 3px solid black;
-
 align-items: center;
 justify-content: center;
 text-align: center;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(8, 0, 255, 0.3) 0px 18px 36px -18px inset;    border-radius: 20%;
     padding: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
+    height:fit-content;
 }
 .product-name{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(8, 0, 255, 0.3) 0px 18px 36px -18px inset;    border-radius: 20%;
@@ -87,8 +100,8 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(8, 0, 255, 0.
     padding: 0.5%;
     margin: 1%;
 }
-.table{
-/* border: 1px solid; */
+/* .table{
+border: 1px solid; 
 margin: 20px;
 text-align: center;
 width: 100%;
@@ -101,7 +114,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(8, 0, 255, 0.
     align-items: center;
     text-align: center;
 
-}
+}  */
 tr,th,td{
 border: 1px solid;
 padding: 4px;
@@ -128,13 +141,7 @@ display: flex;
 #MAIN_ALL_PAGE_LINK{
     color: black;
 }
-.imgwk{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  
-    
-}
+
 .PC{
     font-size: 15PX;
     background-color: antiquewhite;
@@ -145,6 +152,7 @@ display: flex;
     align-items: center;
 
 }
+
 
 
 * {box-sizing: border-box;}
@@ -184,7 +192,7 @@ img {vertical-align: middle;}
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -221,7 +229,8 @@ img {vertical-align: middle;}
     
     
     <div class="underwere">
-    <div class="table-sample"> <img src="WK1.jpg" alt="WK1">
+    <div class="table-sample">
+         <img src="WK1A.jpg" alt="WK1">
     <div class="table">
     <div class="product-name"><DIV class="PC">Product code-WK1</DIV>design Rumal</div>
     
@@ -244,7 +253,7 @@ img {vertical-align: middle;}
 
 
 
-  
+    <div class="underwere">
     <div class="table-sample"> 
 
 
@@ -263,9 +272,9 @@ img {vertical-align: middle;}
             </div>
             
             <div class="mySlidesWK2 fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="WK2C.jpg" style="width:100%">
-              <div class="text">Sample 3</div>
+              <div  class="numbertext">3 / 3</div>
+              <img class="slide_img" src="WK2C.jpg" style="width:100%">
+              <div  class="text">Sample 3</div>
             </div>
             
             </div>
@@ -315,19 +324,19 @@ img {vertical-align: middle;}
 
             <div class="mySlidesWK3 fade">
               <div class="numbertext">1 / 3</div>
-              <img src="WK3A.jpg" style="width:100%">
+              <img class="slide_img" src="WK3A.jpg" style="width:100%">
               <div class="text">Sample 1</div>
             </div>
             
             <div class="mySlidesWK3 fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="WK3B.jpg" style="width:100%">
+              <div  class="numbertext">2 / 3</div>
+              <img class="slide_img" src="WK3B.jpg" style="width:100%">
               <div class="text">sample 2</div>
             </div>
             
             <div class="mySlidesWK3 fade">
               <div class="numbertext">3 / 3</div>
-              <img src="WK3C.jpg" style="width:100%">
+              <img class="slide_img" src="WK3C.jpg" style="width:100%">
               <div class="text">Sample 3</div>
             </div>
             
