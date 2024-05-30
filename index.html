@@ -311,7 +311,9 @@ font-weight: 600;
     <div class="table-sample">
          <img src="WK1.jpg" alt="WK1">
     <div class="table">
-    <div class="product-name"><DIV class="PC">Product code-WK1</DIV>design Rumal</div>
+    <div class="product-name"><DIV class="PC">Product code-WK1
+
+    </DIV>design Rumal</div>
     
     <table>
     <tr>
@@ -335,7 +337,9 @@ font-weight: 600;
         <div class="table-sample">
              <img src="WK1.1.jpg" alt="WK1.1">
         <div class="table">
-        <div class="product-name"><DIV class="PC">Product code-WK1.1</DIV>
+        <div class="product-name"><DIV class="PC">Product code-WK1.1
+
+        </DIV>
             Smooth design Rumal</div>
         
         <table>
@@ -361,8 +365,8 @@ font-weight: 600;
 
 
 
-
-    
+<!-- go to home -->
+<!--     
         <div class="underwere">
             <div class="table-sample">
                  <img src="WK1.2.jpg" alt="WK1.2">
@@ -383,7 +387,7 @@ font-weight: 600;
             <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
             </marquee>
             </div>
-            </DIV>
+            </DIV> -->
 
 
 
@@ -396,79 +400,6 @@ font-weight: 600;
 
     
 
-
-  
-    <div class="table-sample"> 
-
-
-        <div class="slideshow-container">
-
-            <div class="mySlidesWK2 fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="WK2A.jpg" style="width:100%">
-              <div class="text">Sample 1</div>
-            </div>
-            
-            <div class="mySlidesWK2 fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="WK2B.jpg" style="width:100%">
-              <div class="text">sample 2</div>
-            </div>
-            
-            <div class="mySlidesWK2 fade">
-              <div  class="numbertext">3 / 3</div>
-              <img class="slide_img" src="WK2C.jpg" style="width:100%">
-              <div  class="text">Sample 3</div>
-            </div>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dotWK2"></span> 
-              <span class="dotWK2"></span> 
-              <span class="dotWK2"></span> 
-            </div>
-
-
-        <div class="product-name"><DIV class="PC">Product code-WK2</DIV>
-         girls dress
-           </div>
-    
-
-    
-
-       <div class="table">
-       <table>
-       <tr>
-       <td>1 years girl</td>
-       <td>50 RS</td>
-       </tr>
-       <tr>
-        <td>2 years girl</td>
-        <td>55 RS</td>
-        </tr>
-        <tr>
-            <td>3 years girl</td>
-            <td>60 RS</td>
-            </tr>
-            <tr>
-                <td>4 years girl</td>
-                <td>65 RS</td>
-                </tr>
-                <tr>
-                    <td>5 years girl</td>
-                    <td>70 RS</td>
-                    </tr>
-       </table>
-       <marquee
-       behavior="alternate"
-       id="marquee"
-       scrollamount = "4">
-       <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
-       </marquee>
-       </div>
-       </DIV>
 
 
 
@@ -1115,96 +1046,8 @@ scrollamount = "4">
         </marquee>
         </div>
     </DIV>
-    
-    
-    
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
- 
-    <div class="table-sample"> <img src="WK14.jpg" alt="WK14">
-        <div class="table">
-        <div class="product-name">
-            <DIV class="PC">Product code-WK14</DIV>
-            Hanger Set <br>size cm x cm </div>
-        <table>
-            <tr>
-                <td>6  Hanger</td>
-                <td>75</td>
-                </tr>
-
-     
-        </table>
-        <marquee
-        behavior="alternate"
-        id="marquee"
-        scrollamount = "4">
-        <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
-        </marquee>
-        </div>
-    </DIV>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-        
-    
-      
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-            
-        </a>
+          </a>
      
 
 
@@ -1243,27 +1086,6 @@ btn_btn_4.style.color = "white";
 
 
 
-
-
-var slideWK2Index = 0;
-showSlidesWK2();
-
-function showSlidesWK2() {
-  let i;
-  let slidesWK2 = document.getElementsByClassName("mySlidesWK2");
-  let dotsWK2 = document.getElementsByClassName("dotWK2");
-  for (i = 0; i < slidesWK2.length; i++) {
-    slidesWK2[i].style.display = "none";  
-  }
-  slideWK2Index++;
-  if (slideWK2Index > slidesWK2.length) {slideWK2Index = 1}    
-  for (i = 0; i < dotsWK2.length; i++) {
-    dotsWK2[i].className = dotsWK2[i].className.replace(" active", "");
-  }
-  slidesWK2[slideWK2Index-1].style.display = "block";  
-  dotsWK2[slideWK2Index-1].className += " active";
-  setTimeout(showSlidesWK2, 2000); // Change image every 2 seconds
-};
 
 
 
