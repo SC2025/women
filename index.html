@@ -26,8 +26,10 @@ height: 100%;}
   border: 2px solid black;
  font-size: 13PX;
  font-weight: 900;
- opacity: 0;
+ opacity: 1;
 }
+
+
 input{
   padding: 3px;
   font-weight: 800;
@@ -907,8 +909,10 @@ for(let i = 0; i<button.length; i++){
 
       document.getElementById("all_pro_page").remove();
 
-      document.getElementById("pp_div_1").style.opacity = "1";
-      document.getElementsByTagName("body").style.hieght = "100%";
+      function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}topFunction();
 
     })
 };
@@ -1079,6 +1083,9 @@ else{
   document.getElementById("L&j&p_DIV").remove();
   
 }
+
+
+
 setTimeout(() => {
   alert(`${name_p.value}
   ${product_price.innerHTML * selectpro_quntity + transport_charge * selectpro_quntity} RS पेमेंट करण्यासाठी कोणत्याही पेमेंट अँप ने हा QR कोड स्कॅन करा आणि पेमेंट पूर्ण झाल्यांनतर ट्रान्झॅक्शन आयडीचे शेवटचे 4 अंक लिहा
