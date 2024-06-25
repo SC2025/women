@@ -16,7 +16,7 @@ html,body{
 width: 100%;
 height: 100%;}
 
-#pp_div_1{
+#pp_div_1,#pp_div_2{
   background-color: #dfe3f0;
   width: 100%;
   font: bold;
@@ -26,7 +26,6 @@ height: 100%;}
   border: 2px solid black;
  font-size: 13PX;
  font-weight: 900;
- margin-top: 15000px;
  opacity: 0;
 }
 input{
@@ -909,8 +908,7 @@ for(let i = 0; i<button.length; i++){
       document.getElementById("all_pro_page").remove();
 
       document.getElementById("pp_div_1").style.opacity = "1";
-      document.getElementById("pp_div_1").style.marginTop = "0px";
-      document.getElementsByTagName("bodu").style.hieght = "100%";
+      document.getElementsByTagName("body").style.hieght = "100%";
 
     })
 };
