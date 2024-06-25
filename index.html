@@ -14,7 +14,12 @@ box-sizing: border-box;};
 
 html,body{
 width: 100%;
-height: 100%;}
+height: 100%;
+}
+
+body{
+  padding: 5px;
+}
 
 #pp_div_1,#pp_div_2{
   background-color: #dfe3f0;
@@ -26,7 +31,7 @@ height: 100%;}
   border: 2px solid black;
  font-size: 13PX;
  font-weight: 900;
- opacity: 1;
+ opacity: 0;
 }
 
 
@@ -883,15 +888,17 @@ on class="btn" value="">	HIRSHITA L-SIZE Stretchable LEGGINGS => 1 PIECE = 196 R
  </div>
  <br>
 
-<div id="chak_mark"></div>
-<br>
-<button class="button" id="gotowhatsapp">-Submit-</button>
+
+
 </BR>
 <div>तुम्ही 20% ची बचत केली त्याबद्दल अभिनंदन. </BR>
   पेमेंट झाल्या नंतर -Submit- या बटन वर क्लिक करा.</BR>
   क्लिक केल्या नंतर  तुम्ही  व्हाट्सअप मध्ये जाल.</BR>
  व्हाट्सअप मध्ये SEND SMS करा तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.</BR>
- आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल.ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल.</div>
+ आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल.ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल.
+ आर्डर पूर्ण झाल्या नंतर तुमची संपूर्ण माहिती सर्व्हर वरून डिलिट केली जाईल.<div id="chak_mark"></div></div>
+ <br>
+ <button class="button" id="gotowhatsapp">-Submit-</button>
 </div>
 
 </div>
@@ -908,6 +915,8 @@ for(let i = 0; i<button.length; i++){
   
 
       document.getElementById("all_pro_page").remove();
+
+      document.getElementById("pp_div_1").style.opacity = "1";
 
       function topFunction() {
   document.body.scrollTop = 0;
@@ -1046,10 +1055,21 @@ document.getElementById("Payment_gatway2").innerHTML = `scan QR code and pay = $
 
 document.getElementById("pp_div_1").remove();
 document.getElementById("pp_div_2").style.opacity = "1";
-document.getElementById("pp_div_2").style.marginTop = "0px";
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}topFunction();
+
+setTimeout(() => {
+  alert(`${name_p.value}
+  ${product_price.innerHTML * selectpro_quntity + transport_charge * selectpro_quntity} RS पेमेंट करण्यासाठी कोणत्याही पेमेंट अँप ने हा QR कोड स्कॅन करा आणि पेमेंट पूर्ण झाल्यांनतर ट्रान्झॅक्शन आयडीचे शेवटचे 4 अंक लिहा
+  `)
+}, 8000);
 }
 //CHACK MARK
-document.getElementById("chak_mark").innerHTML = `I am ${name_p.value} i know all Terms and Conditions.`
+document.getElementById("chak_mark").innerHTML = `वरील सर्व माहिती मी काळजीपूर्वक भरली आहे .मी ${name_p.value} मला सर्व अटी आणि नियम मान्य आहेत.`
 
 //colour 
       //LEGGIND AND JEAND OPACITY
@@ -1085,12 +1105,6 @@ else{
 }
 
 
-
-setTimeout(() => {
-  alert(`${name_p.value}
-  ${product_price.innerHTML * selectpro_quntity + transport_charge * selectpro_quntity} RS पेमेंट करण्यासाठी कोणत्याही पेमेंट अँप ने हा QR कोड स्कॅन करा आणि पेमेंट पूर्ण झाल्यांनतर ट्रान्झॅक्शन आयडीचे शेवटचे 4 अंक लिहा
-  `)
-}, 8000);
 
 })
 
