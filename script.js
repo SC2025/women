@@ -42,13 +42,19 @@ function ORDER_ID_NEXT(){
         document.getElementById("today_date").innerHTML = `${day}.${month}.${year}`;
 
        
-        if (window.location.href = "https://sc2025.github.io/man/") {
+        if (window.location.href == "https://sc2025.github.io/man/"
+          || window.location.href == "sc2025.github.io/man/"
+        ) {
           document.getElementById("last_id").innerHTML = `${month}${year}${day}`+ man;
         }
-      else if (window.location.href = "https://sc2025.github.io/women/") {
+      else if (window.location.href == "https://sc2025.github.io/women/"||
+        window.location.href == "sc2025.github.io/women/"
+      ) {
         document.getElementById("last_id").innerHTML = `${month}${year}${day}`+ women;
         }
-else if (window.location.href = "https://sc2025.github.io/home/") {
+else if (window.location.href == "https://sc2025.github.io/home/"||
+  window.location.href == "sc2025.github.io/home/"
+) {
       // Printing the first id and last
       document.getElementById("last_id").innerHTML = `${month}${year}${day}`+ home;}
 else(
