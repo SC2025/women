@@ -40,7 +40,7 @@ function ORDER_ID_NEXT(){
     day.padStart('2', '0') : day;
         //PRINTING TODAY DATE
         document.getElementById("today_date").innerHTML = `${day}.${month}.${year}`;
-
+console.log(window.location.href);
        
         if (window.location.href == "https://sc2025.github.io/man/"
           || window.location.href == "sc2025.github.io/man/"
@@ -58,7 +58,7 @@ else if (window.location.href == "https://sc2025.github.io/home/"||
       // Printing the first id and last
       document.getElementById("last_id").innerHTML = `${month}${year}${day}`+ home;}
 else(
-  document.getElementById("last_id").innerHTML = `${month}${year}${day}`;
+  document.getElementById("last_id").innerHTML = `${month}${year}${day}`
 )
 
 
