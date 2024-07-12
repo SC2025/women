@@ -1,9 +1,56 @@
+setTimeout(() => {
+  alert(`प्रोड्कट आर्डर साठी फोटो खालील ब्लॅक कलर चे बटन आहेत ;
+    तुम्हाला कोणत्या साईझ चा प्रोड्कट घेयचा आहे त्या नुसार त्या 
+    बटन ला क्लिक करा`)
+}, 2000);
+
+
 
 setTimeout(() => {
   alert(`प्रोड्कट आर्डर साठी फोटो खालील ब्लॅक कलर चे बटन आहेत ;
     तुम्हाला कोणत्या साईझ चा प्रोड्कट घेयचा आहे त्या नुसार त्या 
     बटन ला क्लिक करा`)
-}, 5000);
+}, 120000);
+
+
+document.getElementById("secA_btn").disabled = true;
+document.getElementById("gotowhatsapp").disabled = true;
+
+setInterval(() => {
+  document.getElementById("product-quntity").style.backgroundColor = "red";
+
+}, 1000);
+
+setInterval(() => {
+  document.getElementById("product-quntity").style.backgroundColor = "black";
+
+
+}, 2000);           
+
+setInterval(() => {
+  document.getElementById("Payment_gatway1").style.backgroundColor = "rgb(255, 55, 0)";
+  document.getElementById("Payment_gatway2").style.backgroundColor = "rgb(255, 55, 0)";
+  document.getElementById("Payment_gatway1").style.color = "white";
+  document.getElementById("Payment_gatway2").style.color = "white";
+  document.getElementById("finanl_amount").style.backgroundColor = "WHITE";
+  document.getElementById("finanl_amount").style.color = "black";
+  document.getElementById("finanl_amount").style.border = "2PX SOLID black";
+
+}, 1000);
+
+setInterval(() => {
+  document.getElementById("Payment_gatway1").style.backgroundColor = "black";
+  document.getElementById("Payment_gatway2").style.backgroundColor = "black";
+  document.getElementById("Payment_gatway1").style.color = "white";
+  document.getElementById("Payment_gatway2").style.color = "white";
+  document.getElementById("finanl_amount").style.backgroundColor = "black";
+  document.getElementById("finanl_amount").style.color = "white";
+}, 2000);
+
+
+
+
+
 
   //pree order id
   function ORDER_ID_PREE() {
@@ -45,18 +92,18 @@ console.log(window.location.href);
         if (window.location.href == "https://sc2025.github.io/man/"
           || window.location.href == "sc2025.github.io/man/"
         ) {
-          document.getElementById("last_id").innerHTML = `${month}${year}${day}-man`;
+          document.getElementById("last_id").innerHTML = `${month}${year}${day}-M`;
         }
       else if (window.location.href == "https://sc2025.github.io/women/"||
         window.location.href == "sc2025.github.io/women/"
       ) {
-        document.getElementById("last_id").innerHTML = `${month}${year}${day}-women`;
+        document.getElementById("last_id").innerHTML = `${month}${year}${day}-WK`;
         }
 else if (window.location.href == "https://sc2025.github.io/home/"||
   window.location.href == "sc2025.github.io/home/"
 ) {
       // Printing the first id and last
-      document.getElementById("last_id").innerHTML = `${month}${year}${day}-home`}
+      document.getElementById("last_id").innerHTML = `${month}${year}${day}-H`}
 else(
   document.getElementById("last_id").innerHTML = `${month}${year}${day}`
 )
@@ -102,6 +149,8 @@ let button = document.querySelectorAll(".btn");
 
 for(let i = 0; i<button.length; i++){
   button[i].addEventListener("click",function () {
+
+
  
       document.getElementById("product_price_result").innerHTML = this.value;
       document.getElementById("product_name_result").innerText = this.innerText;
@@ -114,16 +163,8 @@ for(let i = 0; i<button.length; i++){
 
 
 
-
-
-
-
-
-
-
-
-
-
+      document.getElementById("secA_btn").disabled = false ;
+      document.getElementById("gotowhatsapp").disabled = false ;
 
 
       function topFunction() {
@@ -270,20 +311,27 @@ var selectElement_prod_quantitye = product_quntity_P;
 var transport_charge = 30;
   document.getElementById("final_bill").innerText = 
 `FINAL BILL :-
-product name= ${product_name.innerText}.
+product name=
+${product_name.innerText}.
 
 discount :- 20 %.
 
-1 COMBO product price = ${product_price.innerHTML} RS.
+product price = ${product_price.innerHTML} RS.
 
 quantity = ${selectpro_quntity} SET.
 
-transport charges = 30 RS (1 SET).
+${selectpro_quntity} SET product price :- ${product_price.innerHTML} RS X ${selectpro_quntity} SET = ${product_price.innerHTML* selectpro_quntity} RS.
 
-BILL = product price x quantity (ADD) transport charges x quantity.`;
+transport charges :- 30 RS X ${selectpro_quntity} SET = ${30 * selectpro_quntity} RS.
+
+ `
+
+;
 
 
-document.getElementById("finanl_amount").innerText = `BILL :- ${product_price.innerHTML} RS X  ${selectpro_quntity} SET (ADD) ${transport_charge} RS X ${selectpro_quntity} SET = ${product_price.innerHTML * selectpro_quntity + transport_charge * selectpro_quntity} RS`
+document.getElementById("finanl_amount").innerText = 
+`final BILL :- 
+${selectpro_quntity} SET product RS (${product_price.innerHTML * selectpro_quntity}) + transport RS (${30 * selectpro_quntity}) = ${product_price.innerHTML * selectpro_quntity + 30 * selectpro_quntity} RS`
 
 //qr up and down sms
 document.getElementById("Payment_gatway1").innerHTML = `scan QR code and pay = ${product_price.innerHTML * selectpro_quntity + transport_charge * selectpro_quntity} RS`;
@@ -297,14 +345,14 @@ document.getElementById("pp_div_2").style.opacity = "1";
 //colour 
       //LEGGIND AND JEAND OPACITY
       function colour_div_opacoty(){
-        if (document.getElementById("product_col").innerHTML === "col_leggins") {
+        if (document.getElementById("product_col").innerHTML === "L") {
           document.getElementById("JEANS").remove();
         document.getElementById("Petticoat").remove();
         alert(`${name_p.value}
         select your leggins colour;
         `)
       } 
-      else if(document.getElementById("product_col").innerHTML === "col_jeans")
+      else if(document.getElementById("product_col").innerHTML === "J")
       {
         document.getElementById("LEGGINS").remove();
         document.getElementById("Petticoat").remove();
@@ -312,7 +360,7 @@ document.getElementById("pp_div_2").style.opacity = "1";
         select your geans colour;
         `)
       }
-      else if(document.getElementById("product_col").innerHTML === "col_pettioce")
+      else if(document.getElementById("product_col").innerHTML === "P")
       {
         document.getElementById("LEGGINS").remove();
         document.getElementById("JEANS").remove();
@@ -341,7 +389,7 @@ setTimeout(() => {
 
 }
 //CHACK MARK
-document.getElementById("chak_mark").innerHTML = `वरील सर्व माहिती मी काळजीपूर्वक भरली आहे .मी ${name_p.value} मला सर्व अटी आणि नियम मान्य आहेत.`
+document.getElementById("chak_mark").innerHTML = `मी ${name_p.value} वरील सर्व माहिती मी काळजीपूर्वक भरली आहे  आणि मला सर्व Terms and Conditions मान्य आहेत.`
 
 })
 
@@ -360,7 +408,7 @@ document.getElementById("gotowhatsapp").addEventListener("click",function(){
   
 
 
-  if(document.getElementById("product_col").innerHTML === "col_leggins"){
+  if(document.getElementById("product_col").innerHTML === "L"){
   var selectElement_L1_COL = document.getElementById("leggise_1");
   var COL_L1 = selectElement_L1_COL.options[selectElement_L1_COL.selectedIndex].text;
   document.getElementById("col_last_1").innerHTML = COL_L1;
@@ -380,7 +428,7 @@ console.log(COL_L3);
 var COLOUR3 = COL_L3;
 
 }
-else if(document.getElementById("product_col").innerHTML === "col_jeans"
+else if(document.getElementById("product_col").innerHTML === "J"
 )
 {
   var selectElement_J1_COL = document.getElementById("jeans_1");
@@ -405,7 +453,7 @@ var COLOUR3 = COL_J3;
 
 }
 else if(
- document.getElementById("product_col").innerHTML === "col_pettioce"
+ document.getElementById("product_col").innerHTML === "P"
 ){
   var selectElement_P1_COL = document.getElementById("Petticoat_1");
   var COL_P1 = selectElement_P1_COL.options[selectElement_P1_COL.selectedIndex].text;
@@ -461,7 +509,7 @@ else{
 
   + product_name.innerText  + "%0a" + "%0a" 
 
-  +document.getElementById("finanl_amount").innerHTML + "%0a"  + "%0a" 
+  +document.getElementById("finanl_amount").innerText + "%0a"  + "%0a" 
 
   +   COLOUR1 + "/" +  COLOUR2 + "/"  + COLOUR3 + "%0a"+ "%0a" 
 
